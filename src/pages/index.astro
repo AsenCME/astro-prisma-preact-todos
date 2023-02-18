@@ -1,15 +1,10 @@
 ---
+import LoginForm from "../components/LoginForm";
+import Root from "../layouts/root.astro";
+Astro.cookies.delete("userid");
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Root>
+  <h1>Not logged in you stooopid!</h1>
+  <LoginForm client:load />
+</Root>
