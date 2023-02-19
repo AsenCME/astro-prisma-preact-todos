@@ -4,8 +4,7 @@ export default function MyTodos() {
   const { todos } = useTodos();
   return (
     <section>
-      <h1>Todos</h1>
-      <p>My todos here</p>
+      <h1>My Todos</h1>
       <ul>
         {todos.map((t) => (
           <li
