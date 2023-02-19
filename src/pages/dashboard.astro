@@ -1,5 +1,6 @@
 ---
 import AddTodo from "../components/AddTodo";
+import AllTodos from "../components/AllTodos";
 import MyTodos from "../components/MyTodos";
 import Root from "../layouts/root.astro";
 import prisma from "../utils/prisma";
@@ -10,8 +11,9 @@ const user = await prisma.user.findFirst({ where: { id: userid } });
 ---
 
 <Root user={user}>
-  <h1>Hello world!</h1>
-
   <AddTodo client:load />
-  <MyTodos client:load />
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <aside><MyTodos client:load /></aside>
+    <aside><AllTodos client:load /></aside>
+  </section>
 </Root>

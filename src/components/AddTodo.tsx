@@ -17,7 +17,7 @@ export default function AddTodo() {
     <form
       name="addTodoForm"
       onSubmit={handleSubmit}
-      class="flex flex-col gap-4 mt-4"
+      class="flex flex-col gap-4 mt-4 max-w-prose mx-auto"
     >
       <h2>Add new todo</h2>
       <input type="text" name="title" required />

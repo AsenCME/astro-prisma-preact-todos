@@ -1,7 +1,7 @@
 import { Todo } from "@prisma/client";
 import { APIRoute } from "astro";
-import { getAuthCookie, getUser } from "../../utils/auth";
-import prisma from "../../utils/prisma";
+import { getAuthCookie, getUser } from "../../../utils/auth";
+import prisma from "../../../utils/prisma";
 
 export type TodoWithUser = Todo & { user: { id: string; username: string } };
 export type GetTodosReturn = TodoWithUser[];

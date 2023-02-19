@@ -9,9 +9,9 @@ export default function MyTodos() {
         {todos.map((t) => (
           <li
             key={t.id}
-            class="p-2 rounded bg-gray-50 hover:shadow transition mt-2"
+            class="p-4 rounded bg-gray-50 hover:shadow transition mt-4"
           >
-            <h3 class="text-xl font-bold">{t.title}</h3>
+            <h3 class="font-bold text-xl">{t.title}</h3>
             <p class="text-gray-600">{t.notes}</p>
             <a
               href={`/u/${t.user.id}/todos`}
